@@ -3,4 +3,4 @@
 Dieser Branch enthält ausschliesslich die originale Spezifikationen der 
 ["Berlin Group (NextGenPsd2 Downloads)"](https://www.berlin-group.org/nextgenpsd2-downloads).
 
-Letzte Version: 1.3.3 - 20190412
+Letzte Version: 1.3.4 - 20190717v1
