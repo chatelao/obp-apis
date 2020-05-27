@@ -3,7 +3,7 @@ info:
   title: DXC Swiss NextGen Banking API-Framework Implementation
   version: "1.3.4_2019-07-17v1 - Swiss edition 1.3.4.4-CH"
   x-logo:
-    url: "https://openbankingproject-ch.github.io/obp-apis/swiss-ng-logo.png"
+    url: "https://chatelao.github.io/obp-apis/dxc_logo_tagline_vt_wht_rgb.png"
     backgroundColor: "#FFFFFF"
     altText: "DXC Logo"
   description: |
