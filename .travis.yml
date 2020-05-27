@@ -6,5 +6,8 @@ cache: npm
 
 before_script:
   - npm install -g speccy
+  - npm install -g redoc-cli
 
-script: speccy lint --skip openapi-tags-alphabetical swiss-ng-api.yaml
+script:
+  - speccy lint --skip openapi-tags-alphabetical swiss-ng-api.yaml
+  - redoc-cli bundle swiss-ng-api.yaml
