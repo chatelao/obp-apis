@@ -125,11 +125,6 @@ paths:
             In case of a *pain.001* message there are more than one payments contained in the *pain.001 message.
 
             In case of a *JSON* there are several JSON payment blocks contained in a joining list.
-          * ***periodic-payments***:
-            Create a standing order initiation resource for recurrent i.e. periodic payments addressable under {paymentId}
-             with all data relevant for the corresponding payment product and the execution of the standing order contained in a JSON body.
-
-        This is the first step in the API to initiate the related recurring/periodic payment.
 
         ## Single and mulitilevel SCA Processes
 
@@ -10591,7 +10586,7 @@ components:
           schema:
             oneOf: #Different Payment products in JSON
               - $ref: "#/components/schemas/paymentInitiation_json"
-              - $ref: "#/components/schemas/periodicPaymentInitiation_json"
+# Periodic Payments is not supported              - $ref: "#/components/schemas/periodicPaymentInitiation_json"
               - $ref: "#/components/schemas/bulkPaymentInitiation_json"
 
 
@@ -10634,9 +10629,9 @@ components:
             "Example 1: 'payments' - 'pain.001-sepa-credit-transfers'":
               $ref: "#/components/examples/pain.001.001_SCT_singleTransaction"
 
-        multipart/form-data: #For periodic-payments with pain.001
-          schema:
-            $ref: "#/components/schemas/periodicPaymentInitiationMultipartBody"
+#        multipart/form-data: #For periodic-payments with pain.001
+#          schema:
+#            $ref: "#/components/schemas/periodicPaymentInitiationMultipartBody"
 
 
     signingBasket:
@@ -10763,7 +10758,7 @@ components:
            schema:
             oneOf:  #Different Payment Products with status
               - $ref: "#/components/schemas/paymentInitiationWithStatusResponse"
-              - $ref: "#/components/schemas/periodicPaymentInitiationWithStatusResponse"
+#              - $ref: "#/components/schemas/periodicPaymentInitiationWithStatusResponse"
               - $ref: "#/components/schemas/bulkPaymentInitiationWithStatusResponse"
 
         application/xml:
@@ -10778,9 +10773,9 @@ components:
             "Example 1: 'payments' - 'pain.001-sepa-credit-transfers'":
               $ref: "#/components/examples/pain.001.001_SCT_singleTransaction"
 
-        multipart/form-data: #For periodic-payments with pain.001
-          schema:
-            $ref: "#/components/schemas/periodicPaymentInitiationMultipartBody"
+#        multipart/form-data: #For periodic-payments with pain.001
+#          schema:
+#            $ref: "#/components/schemas/periodicPaymentInitiationMultipartBody"
 
 
     OK_200_PaymentInitiationStatus:
